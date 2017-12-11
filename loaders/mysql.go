@@ -125,15 +125,15 @@ switchDT:
 
 	case "tinyint":
 		//people using tinyint(1) really want a bool
-		if precision == 1 {
-			nilVal = "false"
-			typ = "bool"
-			if nullable {
-				nilVal = "sql.NullBool{}"
-				typ = "sql.NullBool"
-			}
-			break
-		}
+		// if precision == 1 {
+		// 	nilVal = "false"
+		// 	typ = "bool"
+		// 	if nullable {
+		// 		nilVal = "sql.NullBool{}"
+		// 		typ = "sql.NullBool"
+		// 	}
+		// 	break
+		// }
 		nilVal = "0"
 		typ = "int8"
 		if nullable {
